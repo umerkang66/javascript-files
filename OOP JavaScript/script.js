@@ -122,7 +122,6 @@ mercedes.accelerate();
 mercedes.brake();
 // everything in JavaScript except primitives are objects
 
-
 // ES6 CLASSES
 // it doesn't work as in other languages like in java, c++, classes are just special type of functions behind the scenes.
 
@@ -219,7 +218,7 @@ const PersonProto = {
   calcAge() {
     console.log(2037 - this.birthYear);
   },
-  
+
   // this is nothing to do with constructor function because we are not using the new operator. this is just the manual way of initializing the object
   init(firstName, birthYear) {
     this.firstName = firstName;
@@ -251,23 +250,23 @@ class CarCl {
     this.make = make;
     this.speed = speed;
   }
-  
+
   accelerate() {
     this.speed += 10;
     console.log(this.speed);
   }
-  
+
   brake() {
     this.speed -= 5;
     console.log(this.speed);
   }
-  
+
   // getter that convert the speed into mi/h from ki/h
   get speedUS() {
     this.speed /= 1.6;
     console.log(this.speed);
   }
-  
+
   set speedUS(speed) {
     this.speed = speed * 1.6;
     console.log(this.speed);
@@ -353,16 +352,16 @@ EV.prototype.chargeBattery = function (chargeTo) {
 EV.prototype.accelerate = function () {
   this.speed += 20;
   this.charge--;
-  
+
   console.log(
     `${this.make} going at ${this.speed} km/h, with the charge of ${this.charge}%`
-    );
-  };
-  
+  );
+};
+
 const tesla = new EV('Tesla', 120, 23);
 tesla.chargeBattery(90);
 tesla.accelerate();
-  
+
 // i know what happened due to the polymorphism the
 
 ///////////////////////////////////////
@@ -373,33 +372,33 @@ class PersonCl {
     this.fullName = fullName;
     this.birthYear = birthYear;
   }
-  
+
   // methods will be added to the .prototype property i.e. instance methods
   calcAge() {
     console.log(2037 - this.birthYear);
   }
-  
+
   greet() {
     console.log(`Hey ${this.fullName}, your age is ${this.calcAge()}`);
   }
-  
+
   // getter in class
   // it kind of added as a property
   get age() {
     return 2037 - this.birthYear;
   }
-  
+
   // try to set property that already exist
   // setter in class
   set fullName(name) {
     if (name.includes(' ')) this._fullName = name;
     else alert(`${name} is not a full name`);
   }
-  
+
   get fullName() {
     return this._fullName;
   }
-  
+
   // STATIC METHOD
   static hey() {
     console.log('Hey there! How are you? 🙋‍♂️');
@@ -415,11 +414,11 @@ class StudentCl extends PersonCl {
     super(fullName, birthYear);
     this.course = course;
   }
-  
+
   introduce() {
     console.log(`My name is ${this.fullName}, and I study ${this.course}`);
   }
-  
+
   calcAge() {
     console.log(
       `I am ${
@@ -431,7 +430,7 @@ class StudentCl extends PersonCl {
     // this calcAge method here is shadowing the one that is in the parent class
   }
 }
-  
+
 const martha = new StudentCl('Martha Jonas', 2012, 'Computer Science');
 martha.introduce();
 martha.calcAge();
