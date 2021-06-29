@@ -1,0 +1,11 @@
+{
+  "name": "guess",
+  "version": "1.0.0",
+  "description": "Guess my number game",
+  "main": "script.js",
+  "scripts": {
+    "live-server": "live-server"
+  },
+  "author": "Umar kang",
+  "license": "ISC"
+}

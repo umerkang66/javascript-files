@@ -1,0 +1,11 @@
+{
+  "name": "pig-game",
+  "version": "1.0.0",
+  "description": "Pig game",
+  "main": "script.js",
+  "scripts": {
+    "start": "live-server"
+  },
+  "author": "Umer kang",
+  "license": "ISC"
+}

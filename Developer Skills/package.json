@@ -1,0 +1,11 @@
+{
+  "name": "developer-skills",
+  "version": "1.0.0",
+  "description": "Developer skills ",
+  "main": "script.js",
+  "scripts": {
+    "live-server": "live-server"
+  },
+  "author": "",
+  "license": "ISC"
+}

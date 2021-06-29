@@ -1,0 +1,11 @@
+{
+  "name": "modal-window",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "start": "live-server"
+  },
+  "author": "Umer kang",
+  "license": "ISC"
+}
